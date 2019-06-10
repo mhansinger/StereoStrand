@@ -3,7 +3,8 @@ alles für das KunstProjekt
 
 ## Ein paar websites:
 
-MIDI \n
+MIDI 
+
 https://pypi.org/project/py-midi/
 https://pypi.org/project/python-rtmidi/
 
