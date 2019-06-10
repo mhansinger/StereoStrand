@@ -17,5 +17,6 @@ https://www.raspberrypi.org/documentation/usage/gpio/python/README.md
 http://raspberry.io/projects/view/reading-and-writing-from-gpio-ports-from-python/  
 https://www.raspberrypi.org/documentation/usage/gpio/python/README.md  
 https://gpiozero.readthedocs.io/en/stable/  
+https://electropeak.com/learn/tutorial-raspberry-pi-gpio-programming-using-python-full-guide/  
 
 
