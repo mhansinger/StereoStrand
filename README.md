@@ -6,6 +6,7 @@ alles für das KunstProjekt
 MIDI  
 https://pypi.org/project/py-midi/  
 https://pypi.org/project/python-rtmidi/  
+https://www.pygame.org/docs/ref/midi.html  
 
 LED  
 https://dordnung.de/raspberrypi-ledstrip/  
