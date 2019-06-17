@@ -13,6 +13,9 @@ https://dordnung.de/raspberrypi-ledstrip/
 https://lightshowpi.org  
 https://thepihut.com/blogs/raspberry-pi-tutorials/27968772-turning-on-an-led-with-your-raspberry-pis-gpio-pins  
 
+I2C Library  
+https://github.com/chrisb2/pi_ina219  
+
 GPIO  
 https://www.raspberrypi.org/documentation/usage/gpio/python/README.md  
 http://raspberry.io/projects/view/reading-and-writing-from-gpio-ports-from-python/  
