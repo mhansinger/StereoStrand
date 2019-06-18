@@ -7,6 +7,7 @@ MIDI
 https://pypi.org/project/py-midi/  
 https://pypi.org/project/python-rtmidi/  
 https://www.pygame.org/docs/ref/midi.html  
+https://github.com/pygame/pygame/blob/master/examples/midi.py  
 
 LED  
 https://dordnung.de/raspberrypi-ledstrip/  
