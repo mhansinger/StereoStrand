@@ -9,7 +9,7 @@ https://pypi.org/project/python-rtmidi/
 https://www.pygame.org/docs/ref/midi.html  
 https://github.com/pygame/pygame/blob/master/examples/midi.py  
 https://github.com/KsushaShlapakova/game_/blob/209eb343cf61335bdd36f9c442fded8f9a4f4d14/venv/Lib/site-packages/pygame/tests/midi_test.py  
-
+https://github.com/pygame/pygame/blob/master/src_py/midi.py  
 
 LED  
 https://dordnung.de/raspberrypi-ledstrip/  
