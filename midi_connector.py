@@ -11,7 +11,7 @@ import pygame.midi
 from pygame.locals import *
 
 class midi_connector(object):
-    def __init__(self,WINDOW,SAMPLE_RATE,CHANNELS,OUTPUT_FREQ):
+    def __init__(self,WINDOW,CHANNELS,OUTPUT_FREQ):
         '''
 
         :param WINDOW: Fenster des Sliding mean
@@ -20,7 +20,7 @@ class midi_connector(object):
         :param OUTPUT_FREQ: Frequenz mit der das Sound-Signal upgedated wird
         '''
         self.WINDOW = WINDOW
-        self.SAMPLE_RATE = SAMPLE_RATE
+        #self.SAMPLE_RATE = SAMPLE_RATE
         self.CHANNELS = CHANNELS
         self.OUTPUT_FREQ =OUTPUT_FREQ
 
@@ -40,6 +40,24 @@ class midi_connector(object):
 
     def quit_midi(self):
         self.mymidi.quit()
+
+    def send_signal(self):
+
+        # update the voltage array
+        self.voltometer.update_shunt_voltage()
+
+        # get the current shunt voltage
+        this_shunt_voltage = self.voltometer.get_shunt_voltage()
+
+        this_voltage_array = self.voltometer.get_voltage_array()
+
+        # get MAX and MIN values of the voltage array for normalization
+        this_max_volt = max(this_voltage_array)
+        this_min_volt = min(this_voltage_array)
+
+        #TODO
+        # hier muss soetwas wie Binning gemacht werden um den richtig Kanal zu finden...
+
 
 
 
