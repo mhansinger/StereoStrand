@@ -9,6 +9,7 @@ import os
 import pygame
 import pygame.midi
 from pygame.locals import *
+import progressbar
 
 class midi_connector(object):
     def __init__(self,WINDOW,CHANNELS,OUTPUT_FREQ):
@@ -34,6 +35,18 @@ class midi_connector(object):
         self.port = 2  # war beim letzten mal richtig...
 
         self.midi_out = self.mymidi.Output(self.port, 0)
+
+        #TODO
+        # Das Array zuerst mit Daten füllen?
+        bar = progressbar.ProgressBar(maxval=20,widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
+        bar.start()
+        print('Initial Data collection ...')
+        for i in range(100):
+            self.voltometer.update_shunt_voltage()
+            time.sleep()
+            bar.update(i + 1)
+            time.sleep(0.1)
+        bar.finish()
 
     def init_midi(self):
         self.mymidi.init()
