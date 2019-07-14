@@ -49,8 +49,8 @@ class voltage(object):
 
         # maximale array size: zB 20 Mal die Window size, schneide es ab:
         # Grund: Speicher??
-        if len(self._voltage_array) > 20*self.WINDOW:
-            self._voltage_array = self._voltage_array[0:self.WINDOW*20]
+        if len(self._voltage_array) > self.WINDOW:
+            self._voltage_array = self._voltage_array[0:self.WINDOW]
 
         # update counter
         self.counter += 1
