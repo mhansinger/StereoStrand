@@ -100,12 +100,3 @@ class midi_connector(object):
 
 
 
-        #TODO
-        # hier muss soetwas wie Binning gemacht werden um den richtig Kanal zu finden...
-
-
-
-
-
-
-
