@@ -154,8 +154,11 @@ class midi_connector_test(object):
 
         # latest shunt voltage
         this_normed_voltage = normed_voltage_array[0]
+        print('Voltage is: ', this_normed_voltage)
 
         this_channel_number = np.digitize(this_normed_voltage, np.linspace(0,1,self.CHANNELS))
+
+        print('Channel number: ',this_channel_number)
 
         return int(this_channel_number)
 

@@ -94,4 +94,5 @@ def play():
 
 if __name__=='__main__':
     play()
+    midi.quit_midi()
 
