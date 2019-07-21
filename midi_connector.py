@@ -57,6 +57,7 @@ class midi_connector(object):
 
         # get the current shunt voltage
         this_shunt_voltage = self.voltometer.get_shunt_voltage()
+        print('Shunt Voltage: ',this_shunt_voltage)
 
         this_voltage_array = self.voltometer.get_voltage_array()
 
@@ -75,13 +76,13 @@ class midi_connector(object):
 
         # latest shunt voltage
         this_normed_voltage = normed_voltage_array[0]
-        # print('Voltage is: ', this_normed_voltage)
+        print('Normed voltage is: ', this_normed_voltage)
 
         this_channel_number = np.digitize(this_normed_voltage, np.linspace(0,1,self.CHANNELS))
 
         this_channel_number = this_channel_number-1
 
-        # print('Channel number: ',this_channel_number)
+        print('Channel number: ',this_channel_number)
 
         return int(this_channel_number)
 
