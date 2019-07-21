@@ -16,7 +16,6 @@ class midi_connector(object):
         '''
 
         :param WINDOW: Fenster des Sliding mean
-        :param SAMPLE_RATE: FREQUENZ mit der das Fluss Signal gesampelt wird
         :param CHANNELS: Anzahl der Midi Kanäle die Basti hat
         :param OUTPUT_FREQ: Frequenz mit der das Sound-Signal upgedated wird
         '''
@@ -39,7 +38,7 @@ class midi_connector(object):
 
         self.midi_out = self.mymidi.Output(self.port, 0)
 
-        bar = progressbar.ProgressBar(maxval=20,widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
+        bar = progressbar.ProgressBar(maxval=100,widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
         bar.start()
         print('Initial Data collection ...')
         for i in range(100):
