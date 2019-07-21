@@ -26,12 +26,12 @@ try:
 except ValueError:
     print('Muss eine Zahl sein!')
 
+# ASCII bild
+Screen.wrapper(ascii_greeter)
+
 midi = midi_connector(WINDOW=WINDOW,CHANNELS=CHANNELS)
 
 def play():
-
-    # ASCII bild
-    Screen.wrapper(ascii_greeter)
 
     print('\nIt`s on!')
     print('Press Ctrl+c to abort')
