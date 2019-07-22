@@ -69,10 +69,12 @@ except:
     pass
 
 midi = midi_connector(WINDOW=WINDOW,CHANNELS=CHANNELS)
+# initialize midi
+midi.init_midi()
+
 
 print('\nIt`s on!')
 print('Press Ctrl+c to abort')
-
 
 
 def play():
@@ -81,9 +83,6 @@ def play():
 
     # StartZeit
     time_start = time.time()
-
-    # initialize midi
-    midi.init_midi()
 
     # load the mp3 sound file
     # initialze the mixer for mp3
@@ -106,7 +105,7 @@ def play():
             diff_time = jetzt_zeit - time_start
 
         # close midi connection
-        midi.quit_midi()
+        # midi.quit_midi()
 
     except KeyboardInterrupt:
         midi.quit_midi()
