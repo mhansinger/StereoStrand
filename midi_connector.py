@@ -93,7 +93,7 @@ class midi_connector(object):
 
         self.midi_out.note_on(127,1,this_channel_number)
 
-    def test_send(self,channel):
+    def send_channel(self,channel):
         self.midi_out.note_on(1, 127, channel)
 
 
