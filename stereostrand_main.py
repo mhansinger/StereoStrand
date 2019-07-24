@@ -29,7 +29,7 @@ WINDOW = 100
 
 # CHANNELS = 6
 
-PATH_TO_MP3 = ''
+PATH_TO_MP3 = 'Sound/STEREOSONG.wav'
 
 INTERVAL = int(input('\n\nZeitintervall zwischen den Sounds, z.B. 30 heißt alle 30 min spielts (nur ganze Zahlen, kein Komma!)\n'))
 
@@ -88,7 +88,7 @@ def play():
     # initialze the mixer for mp3
     mixer.init()
     mixer.music.load(PATH_TO_MP3)
-    # mixer.music.play()
+    mixer.music.play()
     try:
         while counter<PLAY_TIME:
 
