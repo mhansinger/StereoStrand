@@ -9,6 +9,9 @@ from asciimatics.renderers import FigletText
 from asciimatics.scene import Scene
 from asciimatics.screen import Screen
 
+#sched
+import sched, time
+
 # Startbildschirm
 def ascii_greeter(screen):
     effects = [
@@ -29,7 +32,7 @@ WINDOW = 100
 
 # CHANNELS = 6
 
-PATH_TO_MP3 = 'Sound/STEREOSONG.wav'
+PATH_TO_MP3 = 'Sound/STEREOSONG.mp3'
 
 INTERVAL = int(input('\n\nZeitintervall zwischen den Sounds, z.B. 30 heißt alle 30 min spielts (nur ganze Zahlen, kein Komma!)\n'))
 
@@ -76,6 +79,7 @@ midi.init_midi()
 print('\nIt`s on!')
 print('Press Ctrl+c to abort')
 
+# bis hier OK
 
 def play():
 
@@ -104,8 +108,12 @@ def play():
             jetzt_zeit=time.time()
             diff_time = jetzt_zeit - time_start
 
-        # close midi connection
-        # midi.quit_midi()
+        # stop das Lied
+        mixer.music.stop()
+
+        # scheduler
+        s.enter(INTERVAL, 1000, play, ())
+        s.run()
 
     except KeyboardInterrupt:
         midi.quit_midi()
@@ -113,8 +121,9 @@ def play():
 
 #TODO
 # hier brauchts noch ein scheduler der alle 30 min play macht
+s = sched.scheduler(time.time, time.sleep)
 
-# if __name__=='__main__':
-#     play()
+if __name__=='__main__':
+    play()
 #     midi.quit_midi()
 
