@@ -34,7 +34,7 @@ WINDOW = 100
 
 PATH_TO_MP3 = 'Sound/STEREOSONG.mp3'
 
-INTERVAL = int(input('\n\nZeitintervall zwischen den Sounds, z.B. 30 heißt alle 30 min spielts (nur ganze Zahlen, kein Komma!)\n'))
+INTERVAL = int(input('\n\nZeitintervall zwischen den Sounds (Pause), z.B. 30 heißt alle 30 min spielts (nur ganze Zahlen, kein Komma!)\n'))
 
 PLAY_TIME = int(input('\n\nWie lange solls spielen (Minuten)?\n'))
 
