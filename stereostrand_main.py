@@ -32,7 +32,7 @@ WINDOW = 100
 
 # CHANNELS = 6
 
-PATH_TO_MP3 = 'Sound/STEREOSONG.mp3'
+PATH_TO_MP3 = '/home/pi/Sound/STEREOSONG.mp3'
 
 INTERVAL = int(input('\n\nZeitintervall zwischen den Sounds (Pause), z.B. 30 heißt alle 30 min spielts (nur ganze Zahlen, kein Komma!)\n'))
 
